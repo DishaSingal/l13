@@ -1,0 +1,28 @@
+file = open("a1.txt","w")
+file.write("1. Visit the eiffel Tower\n")
+file.write("2. Learn to play guitar \n")
+file.write("3.Code my own game \n")
+file.close()
+print("Bucket list saved to a1.txt!")
+
+file = open("a1.txt","r")
+content = file.read()
+print("\n=== a1.txt", "r")
+print(content)
+file.close()
+
+file = open("a1.txt","r")
+lines = file.readlines()
+print(f"You have {len(lines)} items on your bucket list")
+file.close()
+
+file = open("a1.txt","a")
+file.write("4. Travel to Japan \n")
+file.write("5. Run a 5k marathon \n")
+file.close()
+print("\n 2 more items added!")
+
+file = open("a1.txt","r")
+print("\n=== updated a1.txt ===")
+print(file.read())
+file.close()
